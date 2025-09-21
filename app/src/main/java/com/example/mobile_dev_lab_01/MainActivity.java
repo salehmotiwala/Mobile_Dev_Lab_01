@@ -1,6 +1,7 @@
 package com.example.mobile_dev_lab_01;
 
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -44,6 +45,17 @@ public class MainActivity extends AppCompatActivity {
             textView.setTextColor(Color.RED);
         } else{
             textView.setTextColor(Color.BLACK);
+        }
+    }
+
+    public void changeBg(View view) {
+        TextView textView = findViewById(R.id.tvChangeText);
+        int prevColor = textView.getBackground().getAlpha();
+
+        if(prevColor == Color.alpha(Color.TRANSPARENT)){
+            textView.setBackgroundColor(Color.GRAY);
+        }else{
+            textView.setBackgroundColor(Color.TRANSPARENT);
         }
     }
 }
