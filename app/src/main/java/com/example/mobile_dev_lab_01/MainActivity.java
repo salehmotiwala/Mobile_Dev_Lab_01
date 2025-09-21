@@ -1,5 +1,6 @@
 package com.example.mobile_dev_lab_01;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -32,6 +33,17 @@ public class MainActivity extends AppCompatActivity {
             textView.setText("Swift > Java!!");
         } else{
             textView.setText("Hello World!");
+        }
+    }
+
+    public void toggleColor(View view) {
+        TextView textView = findViewById(R.id.tvChangeText);
+        int prevColor = textView.getCurrentTextColor();
+
+        if (prevColor == Color.BLACK){
+            textView.setTextColor(Color.RED);
+        } else{
+            textView.setTextColor(Color.BLACK);
         }
     }
 }
