@@ -58,6 +58,4 @@ public class MainActivity extends AppCompatActivity {
             textView.setBackgroundColor(Color.TRANSPARENT);
         }
     }
-
-    //Code for revert
 }
