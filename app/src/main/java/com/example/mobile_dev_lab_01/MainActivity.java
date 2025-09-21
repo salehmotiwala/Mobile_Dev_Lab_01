@@ -1,6 +1,8 @@
 package com.example.mobile_dev_lab_01;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,16 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void toggleText(View view) {
+        TextView textView = findViewById(R.id.tvChangeText);
+        String prevText = textView.getText().toString().toLowerCase();
+
+        if (prevText.equals("hello world!")){
+            textView.setText("Swift > Java!!");
+        } else{
+            textView.setText("Hello World!");
+        }
     }
 }
