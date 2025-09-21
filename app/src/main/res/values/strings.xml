@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mobile_Dev_Lab_01</string>
+    <string name="change_text">Change Text</string>
 </resources>
